@@ -1,27 +1,27 @@
-1. 고객모드
-   1-1. 주문 가능한 커피 조회 (커피, 가격)
-   1-2. 주문
-      *1-2-1. 대기 시간 안내
-      *1-2-2. 커피 옵션(샷 추가, 아이스, 핫, 당도...)
-      *1-2-3. 주문 장바구니 기능
-      *1-2-4. 재료 확인 후 주문 가능한 메뉴 안내
-      1-2-5. 결제
-         *1-2-5-1. 포인트 사용 여부
+1. Customer mode
+??? 1-1. Orderable coffee inquiry (coffee, price)
+??? 1-2. order
+?????? * 1-2-1. Wait time guide
+?????? * 1-2-2. Coffee Options (add shot, ice, hot, bq ...)
+?????? * 1-2-3. Order shopping cart function
+?????? * 1-2-4. After confirming the materials, you can order the menu
+?????? 1-2-5. payment
+????????? * 1-2-5-1. Whether to use points
 
-2. 관리자모드
-   2-1. 재료 조회
-   2-2. 재료 주문
-   2-3. 만들 수 있는 커피 조회
-   2-4. 매출과 순이익 조회
-   *2-5. 메뉴 추가 기능
+2. Administrator mode
+??? 2-1. Material inquiry
+??? 2-2. Ordering materials
+??? 2-3. Coffee views you can make
+??? 2-4. Sales and net profit inquiry
+??? * 2-5. Menu additions
 
-*3. 차별화 기능
-   3-1. 언어 선택
-   3-2. 손님 대기시간
-   3-3. 멤버십
-      3-3-1. 회원 정보
-      3-3-2. 포인트 적립
-      3-3-3. 포인트차감으로 가격 할인
-      // 3-3-4. 자주 주문하는 메뉴
-   // 3-4. 아르바이트
-      // 3-4-1. 아르바이트에게 관리자 권한 부여
+* 3. Differentiation function
+??? 3-1. Select language
+??? 3-2. Waiting time for guests
+??? 3-3. membership
+?????? 3-3-1. Profile
+?????? 3-3-2. Earn points
+?????? 3-3-3. Price deduction by point deduction
+?????? // 3-3-4. Frequently ordered menu
+??? // 3-4. Part time job
+?????? // 3-4-1. Grant administrator permission to a part-time job
