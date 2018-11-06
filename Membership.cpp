@@ -1,12 +1,13 @@
-<<<<<<< HEAD
 #include"Membership.h"
 
-Membership::Membership(string name) {} //setName;
-string Membership::getName() {}
-=======
-#include"Membership.h"
+Membership::Membership(string name, int point = 0) {}
+string Membership::get_name() {} //return member name
+int Membership::get_point() {} //return member point
+void Membership::set_point(int x) {} //set member point
 
-Membership::Membership(string name) {} //setName;
-string Membership::getName() {}
->>>>>>> 9127d6a15cbb5b8da5b2fb87b9dac5d62c6124d9
-void Membership::operator+(int x) { this->stamp += x; }//stamp_increase
+
+void fopen_membership() {}//booting(fread membership list),make class
+void fclose_membership() {}//fwrite membership list
+void create_membership(string name) {} //create membership class
+void delete_membership(string name) {} //delete membership class
+void print_membership() {} //print all membership class
