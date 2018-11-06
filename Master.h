@@ -10,6 +10,7 @@ public:
 	int input_pw(); // input password
 	void set_pw(int pw); // set password
 	void compare_pw(); // compare password
+	void check_pw(int pw, int input_pw); // check password
 };
 
 #endif
