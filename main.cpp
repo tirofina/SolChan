@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include<iostream>
 #include<string>
 
@@ -21,4 +22,17 @@ int main(int argc,char *argv[]) {
 	//default_exe
 
 
+=======
+#include<iostream>
+#include<string>
+#include "Membership.h"
+
+using namespace std;
+
+int main(int argc,char *argv[]) {
+	
+	//default_exe
+
+
+>>>>>>> 9127d6a15cbb5b8da5b2fb87b9dac5d62c6124d9
 }
