@@ -19,7 +19,7 @@ public:
 	Menu(string name,int price,int time);
 	void set_need(int ingredient, string name, int num);
 	int get_price();
-	string get_name();
+	int set_price();
 	int check_metreial(Material& m); //order possible return 1,impossible return 0; 
 };
 

@@ -16,3 +16,6 @@ int Purchase::get_cost() {}
 void Purchase::set_revenue(int price) {}
 void Purchase::set_cost(int price) {}
 int Purchase::calculation_income() {}
+
+void Menu::set_need(int ingredient, string name, int num);
+int Menu::get_price();
