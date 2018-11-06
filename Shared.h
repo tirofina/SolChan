@@ -1,5 +1,3 @@
-//Shared.h
-
 #ifndef SHARED_H
 #define SHARED_H
 
@@ -8,18 +6,21 @@
 
 using namespace std;
 
+class Material;
+
 class Menu {
-	string *menu_name;
-	int *menu_price;
-	int *menu_time;
-	int menu_num;
+	string menu_name;
+	int menu_price;
+	int menu_time;
+	string *need_name;
+	int *need_num;
+	int ingredient_num;
 public:
-	Menu();
-	void add_menu(Material& M); // friend Declaration need
-	void delete_menu(); // for delete_menu
-	void print_menu(); // for print_menu
-	void get_menu(); // for get_menu
-	int pay_menu(int i, int num); // i is menu name
+	Menu(string name,int price,int time);
+	void set_need(int ingredient, string name, int num);
+	int get_price();
+	string get_name();
+	int check_metreial(Material& m); //order possible return 1,impossible return 0; 
 };
 
 class Material {
@@ -29,32 +30,27 @@ class Material {
 	int meterial_num;
 public:
 	Material();
-	void add_meterial(); // for add_menu
-	void delete_meterial(); // for delete_meterial
-	void order_meterial(); // for order_meterial
+	void set_meterial(string name,int price,int amount); //set and add meterial
+	void order_meterial(string name,int amount); // for order_meterial
 	void print_meterial(); // print your current meterials
+	int get_amount(string name);
+	int get_num();
+	friend Menu;
 };
 
 class Purchase {
-
-};
-
-// Edited 2018,11,06,16,44
-class Net_profit {
-	string *net_profit;
-
+	int revenue;
+	int cost;
 public:
-	Net_profit();
-	int add_sales(); // for computing Sales
-	int pay_order_cost(); // Pay for ordering ingredients
-	int net_profit(int a, int b); // for computing Net profit
+	int get_revenue();
+	int get_cost();
+	void set_revenue(int price);
+	void set_cost(int price);
+	int calculation_income();
 };
-	
 
 
+void fopen_shared(); //Menu,meterial fread 
+void fclose_shared(); //Menu,meterial fwrite
 
-void fopen_shared();
-void fclose_shared();
-void order_meterial(Purchase& purchase);
-
-#endifd
+#endif
