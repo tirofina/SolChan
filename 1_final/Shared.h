@@ -11,7 +11,7 @@ class Material;
 class Menu {
 	string menu_name;
 	int menu_price;
-	int menu_time;
+	int menu_time; // for time
 	string *need_name;
 	int *need_num;
 	int ingredient_num;
@@ -21,6 +21,7 @@ public:
 	void set_need(int ingredient, string name, int num);
 	int get_price();
 	int set_price();
+	int set_time(); // for time
 	int check_metreial(Material& m); //order possible return 1,impossible return 0; 
 	static int menu_num;
 };

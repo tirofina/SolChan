@@ -6,6 +6,7 @@ void Menu::set_need(int ingredient, string name, int num) {}
 int Menu::get_price() {}
 int Menu::set_price() {}
 int Menu::check_metreial(Material& m) {} //order possible return 1,impossible return 0;
+int Menu::set_time(); // for time
 
 Material::Material() {}
 void Material::set_meterial(string name, int price, int amount) {} //set and add meterial
@@ -26,3 +27,5 @@ Purchase fopen_Purchase() {}
 void fclose_Menu() {} //Menu,meterial fwrite
 void fclose_Material() {}
 void fclose_Purchase() {}
+
+
