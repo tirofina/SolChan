@@ -12,7 +12,6 @@ public:
 	void check_pw(int pw, int input_pw); // check password
 };
 
-
 void start_master();
 
 #endif

@@ -1,27 +1,36 @@
+#pragma once
 #ifndef MEMBERSHIP_H
 #define MEMBERSHIP_H
 
 #include <string>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <sstream>
 
 using namespace std;
 
 class Membership { //membership
 	string name;
 	int point;
+	string password;
 public:
 	Membership();
-	Membership(string name, int point = 0); //setName,point;
+	~Membership();
+	//Membership(string name="", int point = 0); //setName,point;
 	string get_name();
 	int get_point(); //point_increase
-	void set_point(int x);
+	string get_password();
+	void set_member(string name,int point,string password);
+	void modi_point(int val);
 	static int num;
+	static int max;
 };
 
-void fopen_Membership(Membership& member, int &member_index);
-void fclose_Membership();
-void create_Membership(string name);
-void delete_Membership(string name);
-void print_Membership();
+Membership* fopen_membership();
+void fclose_membership(Membership* Member);
+Membership* create_membership(Membership* Member, string name, int point, string password);
 
 
 #endif
