@@ -25,6 +25,8 @@ void start_master() {
 
 		int Mmn = 0; //Master menu num
 
+		cin >> Mmn;
+
 		switch (Mmn) {
 		case 1:	// 재료 조회
 			cout << "- Material Check -" << endl;
@@ -36,9 +38,28 @@ void start_master() {
 			break;
 		case 3:	// 메뉴 추가
 			cout << "- Add Menu -" << endl;
+
 			cout << "Enter a name for the menu you want to add and press Enter." << endl;
 			add_set_menu_name();
-			add_set_menu_material();
+
+			cout << "Please select the materials you need to make the menu." << endl;
+			cout << "Please enter 0 to add new material." << endl; 
+			
+			int PM = 999; // Pick Material
+			cin >> PM;
+
+			switch (PM) {
+			case 0: 
+				//new material
+				break;
+			case default:
+				print_material(); // print your current materials
+				add_set_menu_material();
+				break;
+			}
+			int PM = 999;
+			
+			cout << "Please set a price for the menu." << endl;
 			add_set_menu_price();
 			
 			break;
