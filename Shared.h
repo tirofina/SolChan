@@ -18,6 +18,9 @@ class Menu {
 public:
 	Menu(string name,int price,int time);
 	void set_need(int ingredient, string name, int num);
+	void add_set_menu(string name) {}
+	void add_set_material(string name) {}
+	void add_set_price(string name) {}
 	int get_price();
 	int set_price();
 	int check_metreial(Material& m); //order possible return 1,impossible return 0; 

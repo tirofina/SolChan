@@ -2,9 +2,13 @@
 
 Menu::Menu(string name, int price, int time) {}
 void Menu::set_need(int ingredient, string name, int num) {}
+void Menu::add_set_menu(string name) {}
+void Menu::add_set_material (string name) {}
+void Menu::add_set_price(string name) {}
 int Menu::get_price() {}
 string Menu::get_name() {}
 int Menu::check_metreial(Material& m) {} //order possible return 1,impossible return 0;
+
 
 Material::Material() {}
 void Material::set_meterial(string name, int price, int amount) {} //set and add meterial
