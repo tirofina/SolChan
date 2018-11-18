@@ -4,7 +4,6 @@
 #include <string>
 #include <fstream>
 #include <iostream>
-#include <string>
 #include <vector>
 #include <sstream>
 
@@ -15,19 +14,22 @@ class Material;
 class Recipe {
 	string menu_name;
 	int menu_price;
-	int menu_time; // for time
+	//int menu_time; // for time
 	string *need_name;
 	int *need_num;
 	int ingredient_num;
+	int ingredient_max;
 public:
 	Recipe();
-	Recipe(string name, int price, int time);
-	void set_need(int ingredient, string name, int num);
+	~Recipe();
+	void set_menu(string name, int price, int num);
+	void set_need(string name, int ingredient);
+	string get_name();
 	int get_price();
-	int set_price();
 	int set_time(); // for time
 	//int check_metreial(Material& m); //order possible return 1,impossible return 0; 
 	static int menu_num;
+	static int menu_max;
 };
 
 class Material {
@@ -41,11 +43,12 @@ public:
 	Material();
 	~Material();
 	void set_material(string name, int price, int amount); //set and add meterial
-	void order_material(string name, int amount); // for order_meterial
+	void modi_material(string name, int val); // for modification meterial
 	void print_material(); // print your current meterials
-	int get_amount(string name);
 	int get_num();
-	string get_name(int i);
+	int get_amount(int index);
+	int get_price(int index);
+	string get_name(int inedx);
 	//friend Menu;
 };
 
@@ -55,4 +58,5 @@ Material* fopen_Material();
 void fclose_Menu(); //Menu,meterial fwrite
 void fclose_Material(Material* ingredient);
 
+bool exist_ingredient(string name);
 #endif

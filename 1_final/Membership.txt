@@ -1,0 +1,7 @@
+aneunsol 10 1234
+jungisu 1 3333
+leesungchan 3 1544
+jiwoo 200 aaaaa
+test1 100 aaaaa
+jigunwoo 10 alskf1klj23
+test1 10 1111

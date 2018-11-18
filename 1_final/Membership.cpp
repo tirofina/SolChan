@@ -37,7 +37,7 @@ Membership* fopen_membership() {
 			while (ss >> buf)
 				tokens.push_back(buf);
 
-			if(i>=max) {
+			if(i==max) {
 				Membership* Member2 = new Membership[max*2];
 				
 				for (int k = 0; k < max; k++) {
@@ -59,6 +59,7 @@ Membership* fopen_membership() {
 	}
 	else {
 		cout << "Membership flie open error" << endl;
+		return NULL;
 	}
 }//booting(fread membership list),make class
 
@@ -67,7 +68,7 @@ Membership* create_membership(Membership* Member,string name,int point,string pa
 	int num = Membership::num;
 	int max = Membership::max;
 
-	if (num >= max) {
+	if (num == max) {
 		Membership* Member2 = new Membership[max * 2];
 
 		for (int k = 0; k < max; k++) {

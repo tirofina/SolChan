@@ -1,0 +1,3 @@
+Lion's_Mane 100 30 
+Schizandra 50 30
+Coffee_beans 20 30
