@@ -1,5 +1,6 @@
 #include<iostream>
 #include "Membership.h"
+#include "Shared.h"
 
 
 using namespace std;
@@ -32,7 +33,25 @@ int main() {
 	}
 	cout << "member total number is " << num << endl;
 
+	Material* ingredient;
+	ingredient = fopen_Material();
+
+	string material_name;
+	int material_price;
+	int material_amount;
+
+	cout << "write ingredient name" << endl;
+	cin >> material_name;
+	cout << "write ingredient price" << endl;
+	cin >> material_price;
+	cout << "write ingredient amount" << endl;
+	cin >> material_amount;
+
+	ingredient->set_material(material_name, material_price, material_amount);
+	ingredient->print_material();
+
 	fclose_membership(Member);
+
 
 	char buffer;
 	cin >> buffer;
