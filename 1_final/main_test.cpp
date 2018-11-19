@@ -1,12 +1,12 @@
 #include<iostream>
 #include "Membership.h"
-#include "Shared.h"
+#include "Material.h"
+#include "Recipe.h"
 
 
 using namespace std;
 
-int main() {
-
+void sample_Membership() {
 	Membership* Member;
 	Member = fopen_membership();
 
@@ -16,7 +16,7 @@ int main() {
 
 	int num = Membership::num;
 	cout << num << endl;
-	
+
 	cout << "write ur name" << endl;
 	cin >> name;
 	cout << "write ur point" << endl;
@@ -25,16 +25,22 @@ int main() {
 	cin >> password;
 
 
-	Member=create_membership(Member, name, point, password);
+	Member = create_membership(Member, name, point, password);
 
 	num = Membership::num;
 	for (int i = 0; i < num; i++) {
-		cout<<i<<" member is "<<Member[i].get_name()<<endl;
+		cout << i << " member is " << Member[i].get_name() << endl;
 	}
 	cout << "member total number is " << num << endl;
 
+	fclose_membership(Member);
+}
+
+void sample_Material() {
+
 	Material* ingredient;
 	ingredient = fopen_Material();
+	ingredient->print_material();
 
 	string material_name;
 	int material_price;
@@ -50,8 +56,51 @@ int main() {
 	ingredient->set_material(material_name, material_price, material_amount);
 	ingredient->print_material();
 
-	fclose_membership(Member);
+	fclose_Material(ingredient);
+}
 
+void sample_Recipe() {
+	Recipe* recipe;
+	recipe = fopen_recipe();
+
+	string name;
+	int price;
+	string ingredient_name;
+	int ingredient_num;
+	int time;
+
+	int num = Recipe::num;
+	cout << num << endl;
+
+	cout << "write recipe name" << endl;
+	cin >> name;
+	cout << "write recipe price" << endl;
+	cin >> price;
+	cout << "write recipe ingredient name" << endl;
+	cin >> ingredient_name;
+	cout << "write recipe ingredient num" << endl;
+	cin >> ingredient_num;
+	cout << "write recipe time" << endl;
+	cin >> time;
+
+
+	recipe = create_recipe(recipe, name, price, ingredient_name, ingredient_num, time);
+
+	num = Recipe::num;
+	for (int i = 0; i < num; i++) {
+		cout << i << " recipe name is " << recipe[i].get_name() << endl;
+	}
+	cout << "recipe total number is " << num << endl;
+
+	fclose_recipe(recipe);
+}
+
+
+int main() {
+
+	//sample_Membership();
+	sample_Recipe();
+	//sample_Material();
 
 	char buffer;
 	cin >> buffer;
