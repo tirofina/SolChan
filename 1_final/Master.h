@@ -1,18 +1,23 @@
 #ifndef MASTER_H
 #define MASTER_H
 
+#include <string>
+#include <iostream>
+#include "Recipe.h"
+#include "Material.h"
+//#include "Master.h"
 using namespace std;
 
-class Master { // for Master
+class Master {
 	int password;
+	int purchase;
+	int income;
 public:
-	Master();
-	int input_pw(); // input password
-	void set_pw(int pw); // set password
-	void check_pw(int pw, int input_pw); // check password
+	void set_password(int password);
+	void set_perchase(int money);
+	void set_income(int money);
 };
 
-
-void start_master();
+Master* fopen_master();
 
 #endif

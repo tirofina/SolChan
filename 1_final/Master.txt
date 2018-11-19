@@ -1,0 +1,3 @@
+password abcd1234
+purchase 10000
+income 0
