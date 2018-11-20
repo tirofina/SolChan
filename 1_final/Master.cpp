@@ -81,3 +81,17 @@ void check_menu(Material* ingredient, Recipe* recipe) {
 	}
 
 }
+
+void order_ingredient(Material* ingredient) {
+	//modi_material use
+	//show order ingredient state
+}
+
+void check_ingredient(Material* ingredient) {
+	//get_name, get_amount use
+}
+
+void start_master(Master* master, Material* ingredient, Recipe* recipe) {
+
+}
+

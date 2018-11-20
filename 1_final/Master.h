@@ -25,5 +25,8 @@ public:
 };
 
 Master* fopen_master();
-void check_menu(Master* master, Material* ingredient, Recipe* recipe);
+void check_menu(Material* ingredient, Recipe* recipe);
+void order_ingredient(Material* ingredient);
+void check_ingredient(Material* ingredient);
+void start_master(Master* master, Material* ingredient, Recipe* recipe);
 #endif
