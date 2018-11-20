@@ -5,19 +5,25 @@
 #include <iostream>
 #include "Recipe.h"
 #include "Material.h"
-//#include "Master.h"
+#include "Admin.h"
+
 using namespace std;
 
 class Master {
-	int password;
+	string password;
 	int purchase;
 	int income;
+	int expense;
+	int wating_time;
 public:
-	void set_password(int password);
+	Master();
+	void set_password(string password);
 	void set_perchase(int money);
 	void set_income(int money);
+	void set_expense(int money);
+	bool check_password(string input);
 };
 
 Master* fopen_master();
-
+void check_menu(Master* master, Material* ingredient, Recipe* recipe);
 #endif

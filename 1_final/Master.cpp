@@ -1,9 +1,15 @@
 #include "Master.h"
 
 Master::Master() {}
-void Master::set_password(int password) { this->password = password; }
+void Master::set_password(string password) { this->password = password; }
 void Master::set_perchase(int money) { this->purchase = money; }
 void Master::set_income(int money) { this->income = money; }
+void Master::set_expense(int money) { this->expense = money; }
+bool Master::check_password(string input) {
+	if (!input.compare(password))
+		return true;
+	return false;
+}
 
 Master* fopen_master() {
 	string filePath = "Master.txt";
@@ -23,12 +29,22 @@ Master* fopen_master() {
 				tokens.push_back(buf);
 
 			string tag = tokens[0];
-			if (tag.compare("password"))
-				master->set_password(stoi(tokens[1]));
-			else if (tag.compare("purchase"))
+			if (!tag.compare("password")) {
+				if (stoi(tokens[1]) == 0) {
+					string password;
+					cout << "input password>>";
+					cin >> password;
+					master->set_password(password);
+					cout << endl << "setting password done!" << endl;
+				}else
+					master->set_password(tokens[1]);
+			}
+			else if (!tag.compare("purchase"))
 				master->set_perchase(stoi(tokens[1]));
-			else if (tag.compare("income"))
+			else if (!tag.compare("income"))
 				master->set_income(stoi(tokens[1]));
+			else if (!tag.compare("expense"))
+				master->set_expense(stoi(tokens[1]));
 			else
 				cout << "master file error" << endl;
 
@@ -43,9 +59,25 @@ Master* fopen_master() {
 	}
 }
 
-Master* check_menu(Master* master, Material* ingredient, Recipe* recipe) {
-	int menu_num=Recipe::num;
-	int i;
+void check_menu(Material* ingredient, Recipe* recipe) {
+	int menu_num = Recipe::num;
+	int i,j;
+	string ingredient_name;
+	int ingredient_num;
 
+	for (i = 0; i < menu_num; i++) {
+		ingredient_name = recipe[i].get_ingredient_name();
+		ingredient_num = recipe[i].get_ingredient_num();
+		cout << i + 1 << ". " << recipe[i].get_name();
+		for (j = 0; j < ingredient->get_num(); j++) {
+			if (!ingredient_name.compare(ingredient->get_name(j))) {
+				if (ingredient_num <= ingredient->get_amount(j)) {
+					cout << " (available)" << endl;
+					break;
+				}
+			}
+			cout << " (not available)" << endl;
+		}
+	}
 
 }
