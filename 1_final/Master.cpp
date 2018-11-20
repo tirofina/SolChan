@@ -1,4 +1,5 @@
 #include "Master.h"
+#include <string.h>
 
 Master::Master() {}
 void Master::set_password(string password) { this->password = password; }
@@ -42,7 +43,8 @@ Master* fopen_master() {
 					cin >> password;
 					master->set_password(password);
 					cout << endl << "setting password done!" << endl;
-				}else
+				}
+				else
 					master->set_password(tokens[1]);
 			}
 			else if (!tag.compare("purchase"))
@@ -67,7 +69,7 @@ Master* fopen_master() {
 
 void check_menu(Material* ingredient, Recipe* recipe) {
 	int menu_num = Recipe::num;
-	int i,j;
+	int i, j;
 	string ingredient_name;
 	int ingredient_num;
 
@@ -88,10 +90,56 @@ void check_menu(Material* ingredient, Recipe* recipe) {
 
 }
 
-void order_ingredient(Master* master,Material* ingredient) {
+void order_ingredient(Master* master, Material* ingredient) {
 	//modi_material use , need input negative value
 	//pay add_expense use, need input positive value  
 	//show order ingredient state
+
+	int menu_num = Recipe::num;
+	string ingredient_name;
+	int ingredient_num;
+
+	cout << "Please enter a menu of materials to add" << "\n";
+
+	cout << "- Current materials list -" << "\n";
+	for (int i = 0; i < menu_num; i++) {
+		ingredient_name = recipe[i].ingredient->get_name(i);
+		ingrenient_amount = recipe[i].ingredient->get_amount(i);
+		cout << "name: " << recipe[i].ingredient->get_name(i) << " / amount:";
+		cout << recipe[i].ingredient->get_amount(i) << "\n";
+	}
+
+	cout << "Enter name of material to add >> ";
+	string input_ingredient_name;
+	cin >> input_ingredient_name;
+
+	int input_ingredient_amount = 0;
+
+	cout << "Checking.";
+	for (int i = 0; i < menu_num; i++) {
+		cout << "Checking..";
+		if (base.find(input_ingredient_name) != string::npos) {
+			cout << "NOT FOUND" << "\n";
+			//			cout << "Enter name of material to add >> ";
+		}
+		if (input_ingredient_name.compare(recipe[i].ingredient->get_name(i)) {
+
+			cout << "Please enter the desired number >> ";
+			cin >> input_ingredient_amount;
+
+			if (input_ingredient_amount >= 1) {
+
+				recipe[i].ingredient->get_amount(i) = input_ingrenient_amount;
+				cout << "Changed." << "\n";
+
+			}
+			else { cout << "Please enter a valid value" << "\n"; }
+
+		}
+		cout << "Checking...";
+	}
+	cout << "Checking...Complete";
+
 }
 
 void check_ingredient(Material* ingredient) {

@@ -1,9 +1,9 @@
 #include "Material.h"
 
 Material::Material() {
-	material_name=new string[5];
-	material_price=new int[5];
-	material_amount=new int[5];
+	material_name = new string[5];
+	material_price = new int[5];
+	material_amount = new int[5];
 	num = 0;
 	max = 5;
 }
@@ -17,9 +17,9 @@ Material::~Material() {
 }
 void Material::set_material(string name, int price, int amount) {
 	if (num == max) {
-		string *material_name2 = new string[max*2];
-		int *material_price2 = new int[max*2];
-		int *material_amount2 = new int[max*2];
+		string *material_name2 = new string[max * 2];
+		int *material_price2 = new int[max * 2];
+		int *material_amount2 = new int[max * 2];
 		for (int i = 0; i < num; i++) {
 			material_name2[i] = material_name[i];
 			material_price2[i] = material_price[i];
@@ -41,9 +41,9 @@ void Material::set_material(string name, int price, int amount) {
 
 } //set and add material
 void Material::modi_material(string name, int val) {
-	
+
 } // for order_material
-void Material::print_material() { 
+void Material::print_material() {
 	for (int i = 0; i < num; i++) {
 		cout << "ingredient name is " << material_name[i] << "\n";
 	}
@@ -64,7 +64,7 @@ Material* fopen_Material() {
 		vector<string> tokens;
 		tokens.reserve(3);
 
-		Material* ingredients=new Material;
+		Material* ingredients = new Material;
 
 		while (getline(openFile, line)) {
 			stringstream ss(line);
@@ -97,7 +97,7 @@ void fclose_Material(Material* ingredient) {
 	int num = ingredient->get_num();
 	if (writeFile.is_open()) {
 		for (i = 0; i < num; i++) {
-			writeFile << ingredient->get_name(i) << " " <<ingredient->get_price(i) << " " << ingredient->get_amount(i);
+			writeFile << ingredient->get_name(i) << " " << ingredient->get_price(i) << " " << ingredient->get_amount(i);
 			writeFile << "\n";
 		}
 		writeFile.close();
