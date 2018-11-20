@@ -40,7 +40,6 @@ void sample_Material() {
 
 	Material* ingredient;
 	ingredient = fopen_Material();
-	ingredient->print_material();
 
 	string material_name;
 	int material_price;
@@ -54,7 +53,6 @@ void sample_Material() {
 	cin >> material_amount;
 
 	ingredient->set_material(material_name, material_price, material_amount);
-	ingredient->print_material();
 
 	fclose_Material(ingredient);
 }
@@ -99,8 +97,20 @@ void sample_Recipe() {
 int main() {
 
 	//sample_Membership();
-	sample_Recipe();
+	//sample_Recipe();
 	//sample_Material();
+
+	Material* ingredient;
+	ingredient = fopen_Material();
+	
+	Recipe* recipe;
+	recipe = fopen_recipe();
+
+	//add master test code;
+
+	fclose_recipe(recipe);
+
+	fclose_Material(ingredient);
 
 	char buffer;
 	cin >> buffer;
