@@ -18,15 +18,23 @@ class Master {
 public:
 	Master();
 	void set_password(string password);
-	void set_perchase(int money);
+	void set_purchase(int money);
 	void set_income(int money);
 	void set_expense(int money);
+	void add_expense(int money);
+	void add_income(int money);
 	bool check_password(string input);
+	string get_password();
+	int get_purchase();
+	int get_expense();
+	int get_income();
+
 };
 
 Master* fopen_master();
 void check_menu(Material* ingredient, Recipe* recipe);
-void order_ingredient(Material* ingredient);
+void order_ingredient(Master* master, Material* ingredient);
 void check_ingredient(Material* ingredient);
 void start_master(Master* master, Material* ingredient, Recipe* recipe);
+void fclose_master(Master* master);
 #endif
