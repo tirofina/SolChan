@@ -77,7 +77,7 @@ string Material::get_name(int index) { return material_name[index]; }
 
 
 Material* fopen_Material() {
-	string filePath = "Material.txt";
+	string filePath = "./res/Material.txt";
 
 	ifstream openFile(filePath.data());
 	if (openFile.is_open()) {
@@ -113,7 +113,7 @@ Material* fopen_Material() {
 
 
 void fclose_Material(Material* ingredient) {
-	string filePath = "Material.txt";
+	string filePath = "./res/Material.txt";
 	ofstream writeFile(filePath.data());
 	int i;
 	int num = ingredient->get_num();

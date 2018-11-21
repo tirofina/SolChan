@@ -19,7 +19,7 @@ int Master::get_expense() { return expense; }
 int Master::get_income() { return income; }
 
 Master* fopen_master() {
-	string filePath = "Master.txt";
+	string filePath = "./res/Master.txt";
 
 	ifstream openFile(filePath.data());
 	if (openFile.is_open()) {
@@ -280,7 +280,7 @@ void start_master(Master* master, Material* ingredient, Recipe* recipe) {
 }
 
 void fclose_master(Master* master) {
-	string filePath = "Master.txt";
+	string filePath = "./res/Master.txt";
 	ofstream writeFile(filePath.data());
 	if (writeFile.is_open()) {
 		writeFile << "password " << master->get_password() << "\n";

@@ -19,7 +19,7 @@ int Recipe::num=0;
 int Recipe::max=5;
 
 Recipe* fopen_recipe() {
-	string filePath = "Recipe.txt";
+	string filePath = "./res/Recipe.txt";
 	int i=0;
 	int max = Recipe::max;
 	Recipe* recipe = new Recipe[max];
@@ -85,7 +85,7 @@ Recipe* create_recipe(Recipe* recipe, string name, int price, string ingredient_
 }
 
 void fclose_recipe(Recipe* recipe) {
-	string filePath = "Recipe.txt";
+	string filePath = "./res/Recipe.txt";
 	ofstream writeFile(filePath.data());
 	int i;
 	int num = Recipe::num;

@@ -8,6 +8,7 @@ Admin::~Admin() {
 		delete[] possible;
 	if (price)
 		delete[] price;
+	int income = 0;
 }
 void Admin::print_menu() { //interface intergration need
 	cout << '\n' << "-------------------- MENU --------------------" << '\n';

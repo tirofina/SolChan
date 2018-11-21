@@ -18,7 +18,7 @@ int Membership::max = 10;
 
 
 Membership* fopen_membership() {
-	string filePath = "Membership.txt";
+	string filePath = "./res/Membership.txt";
 	int i;
 	int max = Membership::max;
 	Membership* Member = new Membership[max];
@@ -88,7 +88,7 @@ Membership* create_membership(Membership* Member,string name,int point,string pa
 
 
 void fclose_membership(Membership* Member) {
-	string filePath = "Membership.txt";
+	string filePath = "./res/Membership.txt";
 	ofstream writeFile(filePath.data());
 	int i;
 	int num = Membership::num;

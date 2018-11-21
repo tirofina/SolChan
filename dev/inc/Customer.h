@@ -22,4 +22,4 @@ public:
 };
 
 void start_customer(Admin* admin,Membership* member);
-#endif CUSTOMER_H
+#endif
