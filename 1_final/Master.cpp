@@ -130,6 +130,7 @@ void order_ingredient(Master* master, Material* ingredient) {
 			if (input_ingredient_amount >= 1) {
 
 				recipe[i].ingredient->get_amount(i) = input_ingrenient_amount;
+				
 				cout << "Changed." << "\n";
 
 			}
@@ -144,6 +145,13 @@ void order_ingredient(Master* master, Material* ingredient) {
 
 void check_ingredient(Material* ingredient) {
 	//get_name, get_amount use
+	cout << "- Current materials list -" << "\n";
+	for (int i = 0; i < menu_num; i++) {
+		ingredient_name = recipe[i].ingredient->get_name(i);
+		ingrenient_amount = recipe[i].ingredient->get_amount(i);
+		cout << "name: " << recipe[i].ingredient->get_name(i) << " / amount:";
+		cout << recipe[i].ingredient->get_amount(i) << "\n";
+	}
 }
 
 void start_master(Master* master, Material* ingredient, Recipe* recipe) {

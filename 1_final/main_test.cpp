@@ -2,6 +2,7 @@
 #include "Membership.h"
 #include "Material.h"
 #include "Recipe.h"
+#include "Master.h"
 
 
 using namespace std;
@@ -93,12 +94,21 @@ void sample_Recipe() {
 	fclose_recipe(recipe);
 }
 
+void sample_Master() {
+	Master* master;
+	master = fopen_master();
+
+	check_menu(ingredient, recipe);
+	order_ingredient(master, ingredient);
+	check_ingredient(ingredient);
+}
 
 int main() {
 
 	//sample_Membership();
 	//sample_Recipe();
 	//sample_Material();
+	sample_Master();
 
 	Material* ingredient;
 	ingredient = fopen_Material();
@@ -106,11 +116,17 @@ int main() {
 	Recipe* recipe;
 	recipe = fopen_recipe();
 
+	Master* master;
+	master = fopen_master();
+
+
 	//add master test code;
 
 	fclose_recipe(recipe);
 
 	fclose_Material(ingredient);
+
+	fclose_master(master);
 
 	char buffer;
 	cin >> buffer;
