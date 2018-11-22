@@ -1,7 +1,7 @@
 #include "Customer.h"
 
 
-Cart::Cart() { name = new string[4]; num = new int[4]; order_num = 0; } //Need to supplement later - size
+Cart::Cart() { name = new string[4]; num = new int[4]; order_num = 0; income = 0; } //Need to supplement later - size
 void Cart::add_cart(string s, int n,int money) {
 	name[order_num] = s;
 	num[order_num] = n;
