@@ -88,6 +88,7 @@ int Store::take_order(std::string coffee)
         if (coffee == c.getName())
         {
             _sales += c.getPrice();
+			inc_money(c.getPrice());
 
             for (int j = 0; j < c._required_ingredient_v.size(); j++)
             {
@@ -115,6 +116,7 @@ int Store::take_order(std::string coffee, std::string name)
         if (coffee == c.getName())
         {
             _sales += c.getPrice();
+			inc_money(c.getPrice());
             point = c.getPrice() / 10;
             for (int j = 0; j < c._required_ingredient_v.size(); j++)
             {
@@ -164,9 +166,11 @@ int Store::take_order(std::string coffee, std::string name, int point)
         {
 			if (point_flag) {
 				_sales += (c.getPrice() - point);
+				inc_money(c.getPrice() - point);
 			}
 			else {
 				_sales += c.getPrice();
+				inc_money(c.getPrice());
 			}
 
             for (int j = 0; j < c._required_ingredient_v.size(); j++)
