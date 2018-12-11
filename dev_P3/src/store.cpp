@@ -144,12 +144,30 @@ int Store::take_order(std::string coffee, std::string name)
 
 int Store::take_order(std::string coffee, std::string name, int point)
 {
+	bool point_flag = false;
+	for (int k = 0; k < _membership_v.size(); k++)
+	{
+		if (name == _membership_v[k].getName())
+		{
+			if (_membership_v[k].getPoint() >= point) {
+				_membership_v[k].dec(point);
+				point_flag = true;
+			}
+			break;
+		}
+	}
+
     for (int i = 0; i < _coffee_v.size(); i++)
     {
         Coffee c = _coffee_v[i];
         if (coffee == c.getName())
         {
-            _sales += (c.getPrice() - point);
+			if (point_flag) {
+				_sales += (c.getPrice() - point);
+			}
+			else {
+				_sales += c.getPrice();
+			}
 
             for (int j = 0; j < c._required_ingredient_v.size(); j++)
             {
@@ -167,14 +185,6 @@ int Store::take_order(std::string coffee, std::string name, int point)
         }
     }
 
-    for (int k = 0; k < _membership_v.size(); k++)
-    {
-        if (name == _membership_v[k].getName())
-        {
-            _membership_v[k].dec(point);
-            break;
-        }
-    }
 }
 void Store::printAllIngredients()
 {
