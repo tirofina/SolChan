@@ -307,7 +307,7 @@ void Store::PurchaseIngredients()
 
     sumPurchase = _ingredient_v[Purchase - 1].increaseAmount(numPurchase);
 
-    if (getmoney() > sumPurchase)
+    if (getmoney() >= sumPurchase)
     {
         _money -= sumPurchase;
 
