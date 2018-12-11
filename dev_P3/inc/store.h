@@ -112,6 +112,7 @@ class Store
 
   private:
 	bool isAvailable(const Coffee &c);
+	void inc_money(int delta) { _money += delta; };
 
   private:
 	std::vector<Coffee> _coffee_v;
