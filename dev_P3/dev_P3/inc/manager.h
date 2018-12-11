@@ -23,6 +23,8 @@ class Manager{
         int admin_handler();
         int process(const msg_t& msg);
         int take_order(std::string coffee){return _store.take_order(coffee);};
+        int take_order(std::string coffee,std::string name){return _store.take_order(coffee,name);};
+        int take_order(std::string coffee,std::string name,int point){return _store.take_order(coffee,name,point);};
 
         
         int getSales(){return _store.getSales();};

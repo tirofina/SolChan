@@ -18,6 +18,7 @@ class Customer{
         int say_hello();
         int show_menu();
         int make_order();
+	int make_membership();
         int bye();
 
     private:

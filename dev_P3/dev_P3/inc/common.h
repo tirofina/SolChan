@@ -19,7 +19,11 @@
 #define CMD_MAKE_ORDER  "ORDER"
 #define CMD_BYE         "BYEBY"
 #define CMD_MANAGER     "MNGER"
-
+#define CMD_POINT_SAVE	"SPOIN" //
+#define CMD_POINT_USE	"UPOIN" //
+#define CMD_CHECK_MEM   "CKMEM" //
+#define CMD_MAKE_MEMBER "MKMEM" //
+#define CMD_CHECK_PASS  "CKPAS" 
 
 #define CMD_LEN 6
 #define DATA_LEN 1024   // < PIPE_BUF
