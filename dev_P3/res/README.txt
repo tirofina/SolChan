@@ -1,0 +1,22 @@
+Welcome to the SolChan's Cafe System.
+The structure of the file is as follows.
+
+- C:.
+戌式dev_P3
+    戍式inc
+    戍式res
+    戌式src
+
+The developr directory is maintained by SolChan Developer Support.
+
+Please report any problems with this area to "ckscks1866@gmail.com".
+
+======================================================================
+
+THE INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
+SOLCHAN DISCLAIMS ALL WARRANTIES, EITHER EXPRESSED OR IMPLIED, INCLUDING THE WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  IN NO EVENT SHALL SOLCHAN CORPORATION OR ITS SUPPLIERS BE LIABLE FOR ANY DAMAGES WHATSOEVER INCLUDING DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, LOSS OF BUSINESS PROFITS OR SPECIAL DAMAGES, EVEN IF SOLCHAN CORPORATION OR ITS SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES SO THE FOREGOING LIMITATION MAY NOT APPLY.                          
+					
+					
+			Copyright SolChan 2018.
+
+The most profound technologies are those that disappear. - Mark Weiser -
