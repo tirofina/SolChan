@@ -1,3 +1,0 @@
-Lion's_Mane_Tea 1000 Lion's_Mane_Tea 1 10
-Americano 200 Coffee_beans 1 5
-Espresso 600 Coffee_beans 2 5

@@ -1,3 +1,0 @@
-Lion's_Mane_Tea 1000 Lion's_Mane 1 10
-Schizandra_Tea 500 Schizandra 1 5
-Espresso 300 Coffee_beans 2 5

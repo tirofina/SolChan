@@ -1,4 +1,0 @@
-password 0
-purchase 10000
-income 0
-expense 0
